@@ -33,7 +33,7 @@ def getLOLImages():
         # print(pic_list)
 
     list_filepath = []
-    path = "/home/wang/test/pachong2/lolpic\\"
+    path = "/home/wang/test/pachong_xuni/pachong2/lolpic\\"
     for name in dict_js.values():
         # print(name)
         for i in range(20):
@@ -47,15 +47,12 @@ def getLOLImages():
         n +=1
         if res.status_code == 200:
             print("正在下载%s:"%list_filepath[n])
-            f = open(list_filepath[n],"wb")
+            f = open(list_filepath[n], "wb")
             f.write(res.content)
             f.close()
-
+            # #
             # with open(list_filepath[n],"wb") as f:
             #     f.write(res.content)
-
-
-
 
 getLOLImages()
 
